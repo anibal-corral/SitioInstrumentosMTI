@@ -24,7 +24,7 @@ app.controller('ControllerInstrumento',function($scope, InstrumentoFactory){
 });
 
 //DEFINO UN CONTROLADOR PARA LAS ACCIONES DE INSERTAR Y MODIFICAR
-app.controller('ControllerCrudInstrumento', function($scope, $routeParams,$location, InstrumentoFactory){
+app.controller('ControllerCrudInstrumento',function($scope, $routeParams,$location, InstrumentoFactory, EstablecimientoFactory){
 	    var id = $routeParams.id;//este ID es el index de la lista para no tener que ir a buscar el instrumento nuevamente.
 	       var existe = typeof (id) !== 'undefined';
 
@@ -37,9 +37,13 @@ app.controller('ControllerCrudInstrumento', function($scope, $routeParams,$locat
 	}else{
 		$scope.titulo='Nuevo instrumento';
 		$scope.instrumento="";
+		EstablecimientoFactory.getEstablecimientos().then(function(data){
+			console.log("Ahora aplicaando a la funcion");
+				console.log(data.data);
+				console.log(data.data.establecimientos);
+					$scope.establecimientos=data.data;
+	});
 	}
-	
-	
 	/*
 	$scope.guardarInstrumento = function(id){
 		console.log("ESTE ES EL ID QUE ESTOY RECIBIENDO " + id);
@@ -60,7 +64,7 @@ app.controller('ControllerCrudInstrumento', function($scope, $routeParams,$locat
 	 				marca: $scope.instrumento.marca,
 	 				modelo: $scope.instrumento.modelo,
 	 				origen: $scope.instrumento.origen,
-	 				_id:$scope.instrumento._id
+	 				id_establecimiento:$scope.instrumento.id_establecimiento
 	 			};
 	 			if(existe){
 	 				// el Instrumento ya existía por ende actualizao nomas
@@ -81,11 +85,12 @@ app.controller('ControllerCrudInstrumento', function($scope, $routeParams,$locat
 	 				descripcion: $scope.instrumento.descripcion,
 	 				marca: $scope.instrumento.marca,
 	 				modelo: $scope.instrumento.modelo,
-	 				origen: $scope.instrumento.origen
+	 				origen: $scope.instrumento.origen,
+	 				id_establecimiento:$scope.instrumento.id_establecimiento	
 	 			};
         InstrumentoFactory.createInstrumento(instrumentoModel);
-        $location.path('/instrumento');//Para volver a listar los instrumentos
-        
+        //Para volver a listar los instrumentos
+        $location.path('/instrumento');
         };
 
         

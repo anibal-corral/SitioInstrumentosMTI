@@ -1,4 +1,4 @@
-			'use strict'
+		'use strict'
 		const Establecimiento = require('../models/establecimiento');
 		/*PARA OBTENER EL ESTABLECIMIENTO*/
 		function obtenerEstablecimiento(req, res){
@@ -8,14 +8,20 @@
 		console.log("ESTOY BUSCANDO EL ESTABLECIMIENTO: " + establecimientoId);
 		Establecimiento.findById(establecimientoId, function(err, establecimiento){
 		if(err){
-			return res.status(500).send({message: `Erro al realizar la petición ${err}`});
+		return res.status(500).send({message: `Erro al realizar la petición ${err}`});
 		}else if(!establecimiento){
 		return res.status(404).send({message:'El establecimiento no existe'});
-		}else {
-		console.log(establecimiento);
-	return		res.status(200).send({establecimiento});
 		}
-	});};
+	}).populate('instrumentos').exec(function(err, establecimiento){
+			if(err){
+			console.log("Error al poblar los instrumentos al establecimiento " + err);	
+			return res.status(500).send({message: `Erro al  reallizar la population ${err}`});
+		} else {
+			console.log("No hay erro al poblar el establecimiento " + establecimiento);
+			return		res.status(200).send({establecimiento});
+		};
+	});
+}
 
 		function obtenerEstablecimientos(req, res ){
 		Establecimiento.find({},function(err,establecimientos){

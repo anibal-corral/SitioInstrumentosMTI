@@ -1,9 +1,11 @@
 'use strict'
 
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
 const ProductoSchema=  Schema({
+_creator:  { type: Schema.ObjectId, ref: 'Establecimiento' },
 codigo: Number,
 nombre: String,
 precio: Number,
@@ -15,4 +17,4 @@ origen: String
 
 
 
-module.exports = mongoose.model('Producto', ProductoSchema);
+module.exports = mongoose.model('Producto', ProductoSchema, 'producto');

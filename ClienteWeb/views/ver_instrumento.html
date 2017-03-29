@@ -1,5 +1,14 @@
-<form ng-submit="actualizarInstrumento()">
+<form ng-submit="crearInstrumento()">
 	<h1>{{titulo}}</h1>
+	<div class="form-group">
+	<label for="cmbEstablecimiento">Establecimiento</label>
+	<select class="selectpicker" data-live-search="true" name="cmbEstablecimiento" ng-model="instrumento.id_establecimiento">
+	 <option ng-repeat="establecimiento in establecimientos" value="{{establecimiento._id}}"> {{establecimiento.nombre}}</option>
+    </select>
+	</div>
+
+
+
 
 	<div class="form-group">
 	<label for="codigo">Codigo</label>
@@ -30,7 +39,7 @@
 	<input type="text" name="origen" ng-model="instrumento.origen" class="form-control">
 	</div>
 	<a href="#/instrumento" class="btn btn-danger">Cancelar</a>
-    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
 
 
 </form>

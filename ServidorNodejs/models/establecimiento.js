@@ -8,7 +8,8 @@ nombre: String,
 rut: String,
 ubicacion: String,
 telefono: String,
-horario: String
+horario: String,
+instrumentos:  [{ type: Schema.ObjectId, ref: 'Producto' }]
 });
 
 module.exports = mongoose.model('Establecimiento', EstablecimientoSchema);
