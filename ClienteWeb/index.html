@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="appInstrumentos"> 
+<head>
+
+	<title>ESTE ES EL TITULO DE MI APP</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<!-- <script src="https://code.angularjs.org/1.6.3/angular-resource.min.js"></script> 
+<script src="https://code.angularjs.org/1.6.3/angular-route.min.js"></script> 
+<!-- <script src="https://code.angularjs.org/1.6.3/angular-route.js"></script> -->
+ <!-- ESTO ES PARA EL CSS DE BOOTSTRAP-->
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!--CARGO EL MÓDULO -->
+<script src ="app.js" type="text/javascript"></script>
+<!--LO NECESARIO PARA LOS INSTRUMENTOS -->
+<script src ="controllers/controller.instrumentos.js" type="text/javascript"></script>
+<script src ="services/servicio.instrumentos.js" type="text/javascript"></script>
+<!--LO NECESARIO PARA LOS ESTABLECIMIENTOS -->
+<script src ="controllers/controller.establecimientos.js" type="text/javascript"></script>
+<script src ="services/servicio.establecimiento.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<div ng-include="'views/header.html'" ></div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Instrumentos MTI</h1>
+    <p>Esta es la página de instrumentos MTI, nose que mas escribir así que si tienen sugerencias se aceptan. Está cool!!! Y aunque no lo crean, me llevó caleta de rato hacerloooo</p>
+  </div>
+  
+  <div ng-view></div>
+</div>
+<script type="text/javascript">
+$('.menu li a').click(function(e) {
+  var $this = $(this);
+  if (!$this.hasClass('active')) {
+    $this.addClass('active');
+  }
+  e.preventDefault();
+});
+</script>
+<div ng-include="'views/footer.html'" ></div>
+
+</body>
+</html>

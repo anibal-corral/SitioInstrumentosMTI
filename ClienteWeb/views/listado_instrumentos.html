@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+<a href="#/addinstrumento" class="btn btn-default btn-block">
+    Registrar nuevo instrumento
+</a>
+<div class="panel-heading">Listado de Instrumentos</div>
+<!-- <button ng-click="obtenerInstrumentos()"> hola instrumentos</button> -->
+	<table class="table">
+		<tr><th></th>
+			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Descripción</th>
+			<th>Marca</th>
+			<th>Modelo</th>
+			<th>Origen</th>
+			<th>Codigo</th>
+			<th>Acción</th>
+		</tr>
+		<tr ng-repeat="i in instrumentos">
+		<td>{{$index}}
+		<td>{{i.nombre}}</td>
+		<td>{{i.precio}}</td>
+		<td>{{i.descripcion}}</td>
+		<td>{{i.marca}}</td>
+		<td>{{i.modelo}}</td>
+		<td>{{i.origen}}</td>
+		<td>{{i.codigo}} "     " {{i._id}}</td>
+		<td>
+		<a href="#/instrumento/{{i._id}}" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+		
+		<!--
+ 		<a href="#/instrumento/{{ i._id }}" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+		-->
+		</td>
+		</tr>
+
+	</table>
+
+</div>

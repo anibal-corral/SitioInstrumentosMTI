@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+<a href="#/addestablecimiento" class="btn btn-default btn-block">
+    Registrar nuevo establecimiento
+</a>
+<div class="panel-heading">Listado de Establecimientos</div>
+	<table class="table">
+		<tr>
+			
+			<th>Nombre</th>
+			<th>Rut</th>
+			<th>Ubicación</th>
+			<th>Teléfono</th>
+			<th>Horario</th>
+			<th>Acción</th>
+		</tr>
+		<tr ng-repeat="e in establecimientos">
+		<td>{{e.nombre}}</td>
+		<td>{{e.rut}}</td>
+		<td>{{e.ubicacion}}</td>
+		<td>{{e.telefono}}</td>
+		<td>{{e.horario}}</td>
+		
+		<td>
+		<a href="#/establecimiento/{{e._id}}" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+		</td>
+		</tr>
+
+	</table>
+
+</div>
