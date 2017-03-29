@@ -1,0 +1,36 @@
+<form ng-submit="actualizarInstrumento()">
+	<h1>{{titulo}}</h1>
+
+	<div class="form-group">
+	<label for="codigo">Codigo</label>
+	<input type="text" name="codigo" ng-model="instrumento.codigo" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="nombre">Nombre</label>
+	<input type="text" name="nombre" ng-model="instrumento.nombre" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="precio">Precio</label>
+	<input type="text" name="precio" ng-model="instrumento.precio" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="descripcion">Descripción</label>
+	<input type="text" name="descripcion" ng-model="instrumento.descripcion" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="marca">Marca</label>
+	<input type="text" name="marca" ng-model="instrumento.marca" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="modelo">Modelo</label>
+	<input type="text" name="modelo" ng-model="instrumento.modelo" class="form-control">
+	</div>
+	<div class="form-group">
+	<label for="origen">Origen</label>
+	<input type="text" name="origen" ng-model="instrumento.origen" class="form-control">
+	</div>
+	<a href="#/instrumento" class="btn btn-danger">Cancelar</a>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+
+
+</form>

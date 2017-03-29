@@ -1,0 +1,15 @@
+Colocar en el documento el webeo de que una librería te cambia todo el cuento
+Acostumbrarse a la programación con inyección de dependencias y los famosos callback es diferente a Java
+Como siempre la w3school impecable
+
+Buenos tutoriales leidos
+Anexsoft
+Carlos Azaustre
+DesarrolloWeb
+NodersCL
+ElkinUrango
+POSTMAN
+
+Una vez que se hace el backend y se mete al fronend ya retomar el backend lleva un ratito
+
+Aun me queda pendiente dentro de otras cosas aprender el concepto de handler
