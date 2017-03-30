@@ -37,9 +37,9 @@
 	//DECLARO LA RUTA POST PARA OBTENER 
 	api.post('/establecimiento', controladorEstablecimiento.grabarEstablecimiento);
 	//ACTUALIZAR UN INSTRUMENTO
-	api.put('/establecimiento/:establecimiento', controladorEstablecimiento.actualizarEstablecimiento);
+	api.put('/establecimiento/:establecimientoId', controladorEstablecimiento.actualizarEstablecimiento);
 	//ELIMINAR UN INSTRUMENTO
-	api.delete('/establecimiento/:establecimiento', controladorEstablecimiento.eliminarEstablecimiento);
+	api.delete('/establecimiento/:establecimientoId', controladorEstablecimiento.eliminarEstablecimiento);
 
 //ESTO ES PARA LA UBICACION
 	api.get('/ubicacion', controladorUbicacion.getUbicaciones);

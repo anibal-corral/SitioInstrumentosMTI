@@ -7,7 +7,21 @@
 			//GUARDAMOS EL ID
 		let productoId = req.params.productoId;
 		//BUSCO EL PRODUCTO
-		Producto.findById(productoId, function(err, producto){
+		Producto.findById(productoId).populate('_creator').exec(function(err, producto){
+			if(err){
+			console.log("error al obtener el instrumento: " + err);	
+				return res.status(500).send({message: `Erro al realizar la petición ${err}`});
+		} else if(!producto){
+				res.status(404).send({message: "No hay productos"});
+			}else{
+				console.log(producto);
+				res.status(200).send({producto:producto});
+				
+				//res.status(200).send({productos: productos});
+			}
+
+		});
+		/*Producto.findById(productoId, function(err, producto){
 		if(err){
 			return res.status(500).send({message: `Erro al realizar la petición ${err}`});
 		}else if(!producto){
@@ -16,27 +30,31 @@
 		console.log(producto);
 	return		res.status(200).send({producto});
 		}
-	});};
+	});*/
+
+	};
 
 		function obtenerProductos(req, res ){
-		Producto.find({},function(err,productos){
-			if (err) {
-		return res.status(500).send({message: "error"});
-			}else if(!productos){
+			Producto.find({}).populate('_creator').exec(function(err, productos){
+				if(err){
+				console.log("error al obtener el instrumento: " + err);	
+					return res.status(500).send({message: `Erro al realizar la petición ${err}`});
+			} else if(!productos){
 				res.status(404).send({message: "No hay productos"});
 			}else{
-				console.log("ESTOY LEYENDO LOS PRODUCTOS Y DEVOLVIENDOLOS")
-		console.log(productos);
-res.json(productos);
-				//res.status(200).send({productos: productos});
+				res.status(200).send({instrumentos:productos});
 			}
-		});
+			});
+		
 		};
 
 		function actualizarProducto(req, res){
-
+console.log("ACTUALIZANDO EL INSTRUMENTO");
+debugger;
 			let productoId=req.params.productoId;
-	let update = req.body;
+			console.log("ID INSTRUMENTO: " + productoId);
+			var update = req.body;
+		
 
 			Producto.findByIdAndUpdate(productoId, update, function(err, productoActualizado){
 	if(err){
@@ -52,34 +70,20 @@ res.json(productos);
 		};
 
 		function eliminarProducto(req, resp){
-				let productoId = req.params.productoId;
-
-				Producto.findById(productoId,function(err, producto){
-
-		if(err){
-			return res.status(500).send({message:"error al borrar el producto"});
-		}else{
-			producto.remove(function(err){
-				if(err)
-		{
-		return res.status(500).send({message:"error al borrar el producto"});
-		}
-		else
-		{
-			return res.status(200).send({message:"listo"});
-		}
-
-			});
-		}
-
+			let productoId = req.params.productoId;
+			console.log("removiendo Instrumento " + productoId);
+			Producto.findByIdAndRemove(productoId,function(err){
+			if(err){
+				return resp.status(500).send({message:"error al borrar el instrumento" + err});
+			}else{
+				console.log("REGISTRO producto BORRADO: ");
+				return resp.status(200).send({message:"Registro borrado"});
+			}
 				});
-
-
 		};
 
 		function grabarProducto(req, res){
 		console.log('POST /api/producto');
-		console.log(req.body);
 		//Obtengo el ID del Establecimiento asociado.
 		console.log('Obtengo el ID del Establecimiento asociado.');
 		var id_establecimiento = req.body.id_establecimiento;
@@ -104,8 +108,7 @@ res.json(productos);
 			producto.save(function(err, productoStored){
 
 				if(err)res.status(500).send("Error en el save del producto");
-				console.log("El ID del producto almacenado: " + productoStored._id);
-				console.log("Y el ID del establecimiento es: " + establecimiento._id);
+				console.log("El producto almacenado es: " + productoStored);
 				console.log("Ahora pasaré a almacenar el id del producto en el establecimiento");
 				Establecimiento.update({_id: establecimiento._id}, {$push:{instrumentos:productoStored._id}},function(err,nose){
 				if(err){console.log("error: " + err);}else{
