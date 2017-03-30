@@ -7,9 +7,12 @@
 		//BUSCO EL ESTABLECIMIENTO
 		console.log("ESTOY BUSCANDO EL ESTABLECIMIENTO: " + establecimientoId);
 		Establecimiento.findById(establecimientoId, function(err, establecimiento){
+			console.log("estoy buscando el establcimiento");
 		if(err){
+			console.log("Salió Erro al buscar el esetablecimiento");
 		return res.status(500).send({message: `Erro al realizar la petición ${err}`});
 		}else if(!establecimiento){
+			console.log("El establecimiento no existe");
 		return res.status(404).send({message:'El establecimiento no existe'});
 		}
 	}).populate('instrumentos').exec(function(err, establecimiento){
@@ -39,39 +42,31 @@
 		};
 
 		function actualizarEstablecimiento(req, res){
-
+			
 		let establecimientoId=req.params.establecimientoId;
-		let update = req.body;
+		console.log("aCTUALIZANDO EL ESTABLECIMIENTO: " + establecimientoId);
+		var update = req.body;
 		Establecimiento.findByIdAndUpdate(establecimientoId, update, function(err, establecimientoActualizado){
 		if(err){
-		return res.status(500).send({message:"error al borrar el establecimiento"});
+		return res.status(500).send({message:"error al actualizar  el establecimiento"});
 			}else{
 		return res.status(200).send({establecimiento: establecimientoActualizado});
 			}
 		});
 		};
 
-		function eliminarEstablecimiento(req, resp){
+		function eliminarEstablecimiento(req, resp)
+		{
+				
 				let establecimientoId = req.params.establecimientoId;
-
-				Establecimiento.findById(establecimientoId,function(err, establecimiento){
-
-		if(err){
-			return res.status(500).send({message:"error al borrar el establecimiento"});
-		}else{
-			establecimiento.remove(function(err){
-				if(err)
-		{
-		return res.status(500).send({message:"error al borrar el establecimiento"});
-		}
-		else
-		{
-			return res.status(200).send({message:"listo"});
-		}
-
-			});
-		}
-
+				console.log("El id de establciemiento es: " + establecimientoId);	
+				Establecimiento.findByIdAndRemove(establecimientoId,function(err, establecimiento){
+					if(err){
+						return resp.status(500).send({message:"error al borrar el establecimiento" + err});
+					}else{
+						console.log("REGISTRO ESTABLECIMIENTO BORRADO: " + establecimientoId);
+						return resp.status(200).send({message:"Registro borrado"});
+					}
 				});
 
 

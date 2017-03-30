@@ -12,7 +12,7 @@
 			<th>Marca</th>
 			<th>Modelo</th>
 			<th>Origen</th>
-			<th>Codigo</th>
+			<th>Establecimiento</th>
 			<th>Acción</th>
 		</tr>
 		<tr ng-repeat="i in instrumentos">
@@ -23,8 +23,9 @@
 		<td>{{i.marca}}</td>
 		<td>{{i.modelo}}</td>
 		<td>{{i.origen}}</td>
-		<td>{{i.codigo}} "     " {{i._id}}</td>
+		<td>{{i._creator.nombre}}</td>
 		<td>
+		<button class="btn btn-danger btn-xs pull-right" ng-click="retirar($index,i)" type="button">Retirar</button>
 		<a href="#/instrumento/{{i._id}}" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
 		
 		<!--

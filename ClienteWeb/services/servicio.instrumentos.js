@@ -1,6 +1,5 @@
 'use strict'
 app.factory('InstrumentoFactory', function($http){
-
 	//var url = 'http://localhost:9281/api/producto/';
 	var url = 'http://localhost:9281/api/producto/';
 	var vInstrumentoFactory={
@@ -28,7 +27,16 @@ app.factory('InstrumentoFactory', function($http){
 		createInstrumento:function(instrumento){
 			console.log("Ingresando al Crear Instrumento");
 			return $http.post(url, instrumento).then(function successCallback(response){
-				console.log("Función success para grabar un instrumento el instrumento");
+				console.log("Función success para grabar el instrumento");
+            return response;
+			}, function errorCallback(response){
+			console.log('Error: ' + response);
+			});
+		},
+			removeInstrumento:function(instrumento){
+			console.log("Ingresando al Remover Instrumento " + instrumento );
+			return $http.delete(url+instrumento._id, instrumento).then(function successCallback(response){
+				console.log("Función success para eliminar un instrumento ");
             return response;
 			}, function errorCallback(response){
 			console.log('Error: ' + response);
@@ -38,14 +46,7 @@ app.factory('InstrumentoFactory', function($http){
 			console.log("Ingresando al Actualizar Instrumento");
 			console.log("La url para actualizar sería: " + url+instrumento._id);
 
-			return $http.put(url+instrumento._id,instrumento,
-			{
-			headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-      		},
-			}
-
-				).then(function successCallback(response){
+			return $http.put(url+instrumento._id, instrumento).then(function successCallback(response){
 				console.log("Función success para actualizar el instrumento");
             return response;
 			}, function errorCallback(response){

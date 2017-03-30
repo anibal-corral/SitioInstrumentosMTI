@@ -1,7 +1,5 @@
 'use strict'
 app.factory('EstablecimientoFactory', function($http){
-
-	//var url = 'http://localhost:9281/api/establecimiento/';
 	var url = 'http://localhost:9281/api/establecimiento/';
 	var vEstablecimientoFactory={
 		getEstablecimientos: function(){
@@ -38,14 +36,7 @@ app.factory('EstablecimientoFactory', function($http){
 			console.log("Ingresando al Actualizar Establecimiento");
 			console.log("La url para actualizar sería: " + url+establecimiento._id);
 
-			return $http.put(url+establecimiento._id,establecimiento,
-			{
-			headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-      		},
-			}
-
-				).then(function successCallback(response){
+			return $http.put(url+establecimiento._id,establecimiento).then(function successCallback(response){
 				console.log("Función success para actualizar el establecimiento");
             return response;
 			}, function errorCallback(response){

@@ -4,22 +4,6 @@ app.controller('ControllerEstablecimiento',function($scope, EstablecimientoFacto
 		console.log(data.data);
 		$scope.establecimientos=data.data;
 	});
-/*
-	$scope.obtenerEstablecimientos = function(){
-	EstablecimientoFactory.getEstablecimientos().then(function(data){
-		console.log(data.data);
-		$scope.establecimientos=data.data;
-	});
-	};
-	$scope.obtenerEstablecimiento = function(id){
-		console.log("ESTE ES EL ID QUE ESTOY RECIBIENDO " + id);
-	EstablecimientoFactory.getEstablecimiento(id).then(function(data){
-		console.log(data.data);
-		$scope.establecimiento=data.data;
-		
-	});
-	};
-*/
 });
 
 //DEFINO UN CONTROLADOR PARA LAS ACCIONES DE INSERTAR Y MODIFICAR
@@ -49,21 +33,13 @@ app.controller('ControllerCrudEstablecimiento', function($scope, $routeParams,$l
 	});
 	};
 	*/
-	 $scope.actualizarEstablecimiento = function () {
-	 	console.log("Voy a actualizar el establecimiento ");
-	 	var establecimientoModel = {
-	 				nombre: $scope.establecimiento.nombre,
-	 				rut:$scope.establecimiento.rut,
-	 				ubciacion: $scope.establecimiento.ubicacion,
-	 				telefono: $scope.establecimiento.telefono,
-	 				horario: $scope.establecimiento.horario,
-	 				_id:$scope.establecimiento._id
-	 			};
+	 $scope.actualizarEstablecimiento = function (establecimiento) {
+	 	console.log("Voy a actualizar el establecimiento " + establecimiento);
 	 			if(existe){
 	 				// el Establecimiento ya existía por ende actualizao nomas
-	 				EstablecimientoFactory.updateEstablecimiento(establecimientoModel);
+	 				EstablecimientoFactory.updateEstablecimiento(establecimiento);
 	 			}else{
-	 				EstablecimientoFactory.createEstablecimiento(establecimientoModel);
+	 				EstablecimientoFactory.createEstablecimiento(establecimiento);
 	 			}
         
         $location.path('/establecimiento');//Para volver a listar los establecimientos
