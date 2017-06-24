@@ -1,0 +1,7 @@
+<!ELEMENT ubicacion (pais,region,ciudad,comuna,calle,numero)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT comuna (#PCDATA)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "coordenada": {
+      "type": "object",
+      "properties": {
+        "latitud": {
+          "type": "string"
+        },
+        "longitud": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "latitud",
+        "longitud"
+      ]
+    }
+  },
+  "required": [
+    "coordenada"
+  ]
+}

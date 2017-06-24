@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "producto": {
+      "type": "object",
+      "properties": {
+        "codigo": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "precio": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "marca": {
+          "type": "string"
+        },
+        "modelo": {
+          "type": "string"
+        },
+        "origen": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "codigo",
+        "nombre",
+        "precio",
+        "descripcion",
+        "marca",
+        "modelo",
+        "origen"
+      ]
+    }
+  },
+  "required": [
+    "producto"
+  ]
+}

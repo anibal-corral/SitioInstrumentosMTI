@@ -1,0 +1,14 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ubicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="pais"/>
+        <xs:element type="xs:string" name="region"/>
+        <xs:element type="xs:string" name="ciudad"/>
+        <xs:element type="xs:string" name="comuna"/>
+        <xs:element type="xs:string" name="calle"/>
+        <xs:element type="xs:short" name="numero"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

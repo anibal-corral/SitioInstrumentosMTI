@@ -1,0 +1,6 @@
+<!ELEMENT establecimiento (nombre,rut,ubicacion,telefono,horario)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT rut (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT horario (#PCDATA)>

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "establecimiento": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "rut": {
+          "type": "string"
+        },
+        "ubicacion": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "horario": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nombre",
+        "rut",
+        "ubicacion",
+        "telefono",
+        "horario"
+      ]
+    }
+  },
+  "required": [
+    "establecimiento"
+  ]
+}

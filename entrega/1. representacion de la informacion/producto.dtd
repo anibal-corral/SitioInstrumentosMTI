@@ -1,0 +1,8 @@
+<!ELEMENT producto (codigo,nombre,precio,descripcion,marca,modelo,origen)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>

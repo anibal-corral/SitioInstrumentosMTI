@@ -1,0 +1,3 @@
+<!ELEMENT coordenada (latitud,longitud)>
+<!ELEMENT latitud (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>

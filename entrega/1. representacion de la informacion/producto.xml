@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE producto SYSTEM "producto.dtd">
+<producto>
+  <codigo>737383</codigo>
+  <nombre>Guitarra</nombre>
+  <precio>200000</precio>
+  <descripcion>Sin informacion</descripcion>
+  <marca>Yamaha</marca>
+  <modelo>C-41</modelo>
+  <origen>Chile</origen>
+</producto>

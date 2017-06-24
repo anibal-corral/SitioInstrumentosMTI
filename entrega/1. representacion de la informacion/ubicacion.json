@@ -1,0 +1,10 @@
+{
+  "ubicacion": {
+    "pais": "Chile",
+    "region": "Metropolitana",
+    "ciudad": "Santiago",
+    "comuna": "Vitacura",
+    "calle": "Avenida Santa Maria",
+    "numero": "6400"
+  }
+}

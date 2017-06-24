@@ -1,0 +1,11 @@
+{
+  "producto": {
+    "codigo": "737383",
+    "nombre": "Guitarra",
+    "precio": "200000",
+    "descripcion": "Sin informacion",
+    "marca": "Yamaha",
+    "modelo": "C-41",
+    "origen": "Chile"
+  }
+}

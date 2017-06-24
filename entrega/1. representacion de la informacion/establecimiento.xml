@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "establecimiento.dtd">
+<establecimiento>
+  <nombre>Tienda USM</nombre>
+  <rut>98765000-0</rut>
+  <ubicacion>Avda. Santa María 6400, Vitacura - Santiago</ubicacion>
+  <telefono>+ 56 32  2654678</telefono>
+  <horario>Sin información</horario>
+</establecimiento>

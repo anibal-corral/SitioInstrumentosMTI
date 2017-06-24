@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "ubicacion": {
+      "type": "object",
+      "properties": {
+        "pais": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "ciudad": {
+          "type": "string"
+        },
+        "comuna": {
+          "type": "string"
+        },
+        "calle": {
+          "type": "string"
+        },
+        "numero": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pais",
+        "region",
+        "ciudad",
+        "comuna",
+        "calle",
+        "numero"
+      ]
+    }
+  },
+  "required": [
+    "ubicacion"
+  ]
+}

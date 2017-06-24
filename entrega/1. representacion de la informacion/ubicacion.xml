@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE ubicacion SYSTEM "ubicacion.dtd">
+<ubicacion>
+  <pais>Chile</pais>
+  <region>Metropolitana</region>
+  <ciudad>Santiago</ciudad>
+  <comuna>Vitacura</comuna>
+  <calle>Avenida Santa Maria</calle>
+  <numero>6400</numero>
+</ubicacion>
