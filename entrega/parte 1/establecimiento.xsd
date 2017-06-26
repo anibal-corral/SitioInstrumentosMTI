@@ -1,0 +1,135 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">	
+	<xsd:element name="establecimiento">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Establecimiento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element type="xsd:string" name="nombre"/>
+				<xsd:element type="runType" name="rut"/>
+				<xsd:element ref="ubicacion" minOccurs="0"/>
+				<xsd:element type="TelefonoType" name="telefono"/>
+				<xsd:element type="xsd:string" name="horario"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="runType">
+		<xsd:annotation>
+			<xsd:documentation>Definición de tipo complejo para rut</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="numero">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:positiveInteger">
+						<xsd:maxInclusive value="99999999"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="dv">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:pattern value="(\d|k|K)"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+  
+	<xsd:element name="ubicacion">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Ubicación</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición de tipo complejo para Ubicación</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element type="paisValores" name="pais"/>
+				<xsd:element type="xsd:string" name="region" minOccurs="0"/>
+				<xsd:element type="ciudadValores" name="ciudad"/>
+				<xsd:element type="xsd:string" name="comuna" minOccurs="0"/>
+				<xsd:element type="xsd:string" name="calle"/>
+				<xsd:element type="xsd:short" name="numero"/>
+				<xsd:element ref="coordenada" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:simpleType name="paisValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para pais</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ARGENTINA"/>
+			<xsd:enumeration value="CHILE"/>
+			<xsd:enumeration value="COLOMBIA"/>
+			<xsd:enumeration value="ESPAÑA"/>
+			<xsd:enumeration value="PERU"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ciudadValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para ciudad</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="BUENOS AIRES"/>
+			<xsd:enumeration value="SANTIAGO"/>
+			<xsd:enumeration value="BOGOTÁ"/>
+			<xsd:enumeration value="MADRID"/>
+			<xsd:enumeration value="LIMA"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+  	<xsd:element name="coordenada">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Coordenada</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición de tipo complejo para Coordenada</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element type="xsd:decimal" name="latitud"/>
+				<xsd:element type="xsd:decimal" name="longitud"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="TelefonoType">
+		<xsd:annotation>
+			<xsd:documentation>Definición de tipo complejo para Telefono</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CodigoPais" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="([0-9])+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Prefijo" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="([0-9])+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Numero">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="([0-9])+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Anexo" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="([0-9])+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

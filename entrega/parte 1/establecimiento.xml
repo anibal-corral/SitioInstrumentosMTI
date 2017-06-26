@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE establecimiento SYSTEM "establecimiento.dtd">
+<establecimiento>
+  <nombre>Tienda USM</nombre>
+  <rut>
+	<numero>98765000</numero>
+	<dv>0</dv>
+  </rut>
+  <ubicacion>
+    <pais>CHILE</pais>
+    <region>Metropolitana</region>
+    <ciudad>SANTIAGO</ciudad>
+    <comuna>Vitacura</comuna>
+    <calle>Avenida Santa Maria</calle>
+    <numero>6400</numero>
+	<coordenada>
+		<latitud>-33.3775228</latitud>
+		<longitud>-70.5774312</longitud>
+	</coordenada>
+  </ubicacion>
+  <telefono>
+	<CodigoPais>56</CodigoPais>
+	<Prefijo>32</Prefijo>
+	<Numero>2654678</Numero>
+  </telefono>
+  <horario>Sin información</horario>
+</establecimiento>
