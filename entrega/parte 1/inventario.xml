@@ -1,10 +1,31 @@
 <?xml version="1.0"?>
 <!DOCTYPE inventario SYSTEM "inventario.dtd">
 <inventario>
-	<establecimiento idEstablecimiento="3" />
+	<establecimiento idEstablecimiento="3"/>
 	<listaProductos>
-		<producto idProducto="10"/>
-		<producto idProducto="21"/>
-		<producto idProducto="8"/>
+		<producto idProducto="10">
+			<cantidad>4</cantidad>
+			<precio>5000</precio>
+			<moneda>USD</moneda>
+			<estado>DISPONIBLE</estado>
+			<fechaIngreso>2017-03-27</fechaIngreso>
+			<fechaActualizacion>2017-03-29</fechaActualizacion>
+		</producto>
+		<producto idProducto="21">
+			<cantidad>5</cantidad>
+			<precio>2500</precio>
+			<moneda>USD</moneda>
+			<estado>DISPONIBLE</estado>
+			<fechaIngreso>2017-03-27</fechaIngreso>
+			<fechaActualizacion>2017-03-28</fechaActualizacion>
+		</producto>
+		<producto idProducto="8">
+			<cantidad>6</cantidad>
+			<precio>3000</precio>
+			<moneda>USD</moneda>
+			<estado>DISPONIBLE</estado>
+			<fechaIngreso>2017-03-27</fechaIngreso>
+			<fechaActualizacion>2017-03-27</fechaActualizacion>
+		</producto>
 	</listaProductos>
 </inventario>

@@ -45,8 +45,39 @@
 			<xsd:annotation>
 				<xsd:documentation>Definición para producto</xsd:documentation>
 			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element type="xsd:int" name="cantidad"/>
+				<xsd:element type="xsd:int" name="precio"/>
+				<xsd:element type="monedaValores" name="moneda"/>
+				<xsd:element type="estadoValores" name="estado"/>
+				<xsd:element type="xsd:date" name="fechaIngreso"/>
+				<xsd:element type="xsd:date" name="fechaActualizacion"/>
+			</xsd:sequence>
 			<xsd:attribute name="idProducto" type="xsd:integer" use="required"/>
 		</xsd:complexType>
 	</xsd:element>
-  
+	
+	<xsd:simpleType name="monedaValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para moneda</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="USD"/>
+			<xsd:enumeration value="CLP"/>
+			<xsd:enumeration value="EURO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="estadoValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para estado</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="INGRESADO"/>
+			<xsd:enumeration value="PENDIENTE"/>
+			<xsd:enumeration value="RESERVADO"/>
+			<xsd:enumeration value="DISPONIBLE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
 </xsd:schema>
