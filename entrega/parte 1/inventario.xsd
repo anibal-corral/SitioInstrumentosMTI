@@ -25,11 +25,11 @@
 	
   	<xsd:element name="listaProductos">
 		<xsd:annotation>
-			<xsd:documentation>Elemento Establecimiento Simple</xsd:documentation>
+			<xsd:documentation>Elemento para el listado de productos</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:annotation>
-				<xsd:documentation>Definición para establecimiento</xsd:documentation>
+				<xsd:documentation>Definición para la lista de productos</xsd:documentation>
 			</xsd:annotation>
 			<xsd:sequence>
 				<xsd:element ref="producto" minOccurs="1" maxOccurs="1024"/>

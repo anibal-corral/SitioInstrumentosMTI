@@ -11,6 +11,7 @@
 				<xsd:element type="TelefonoType" name="telefono"/>
 				<xsd:element type="xsd:string" name="horario"/>
 			</xsd:sequence>
+			<xsd:attribute name="idEstablecimiento" type="xsd:integer" use="required"/>
 		</xsd:complexType>
 	</xsd:element>
 	

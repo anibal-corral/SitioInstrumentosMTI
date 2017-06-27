@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE establecimiento SYSTEM "establecimiento.dtd">
-<establecimiento>
+<establecimiento idEstablecimiento="3">
   <nombre>Tienda USM</nombre>
   <rut>
 	<numero>98765000</numero>
