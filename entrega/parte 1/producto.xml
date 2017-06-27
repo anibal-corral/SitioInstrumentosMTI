@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE producto SYSTEM "producto.dtd">
+<producto idProducto="10">
+	<codigo>737383</codigo>
+	<nombre>Guitarra eléctrica GRX22 color candy apple (CA)  Ibanez</nombre>
+	<descripcion>Guitarra eléctrica Marca Ibanez modelo GRX22. Una guitarra no tiene que costar una fortuna para tener un buen sonido, es el caso de la serie GRX de Ibanez, fue desarrollada para los músicos que desean la calidad de esta marca, pero a un precio asequible.</descripcion>
+	<marca>Ibanez</marca>
+	<modelo>GRX22</modelo>
+	<listaCategorias>
+		<categoria>Guitarra eléctrica</categoria>
+	</listaCategorias>
+	<listaCaracteristicas>
+		<caracteristica>
+			<nombre>ESCALA</nombre>
+			<valor>25.5 pulgadas</valor>
+		</caracteristica>
+		<caracteristica>
+			<nombre>NÚMERO DE CUERDAS</nombre>
+			<valor>6</valor>
+		</caracteristica>
+		<caracteristica>
+			<nombre>COLOR</nombre>
+			<valor>Candy Apple (CA)</valor>
+		</caracteristica>
+		<caracteristica>
+			<nombre>MATERIAL NECK</nombre>
+			<valor>Maple</valor>
+		</caracteristica>
+		<caracteristica>
+			<nombre>MATERIAL CUERPO</nombre>
+			<valor>Basswood</valor>
+		</caracteristica>
+	</listaCaracteristicas>
+</producto>

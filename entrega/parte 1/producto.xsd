@@ -1,0 +1,90 @@
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="producto">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Producto</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element type="xsd:int" name="codigo"/>
+				<xsd:element type="xsd:string" name="nombre"/>
+				<xsd:element type="xsd:string" name="descripcion"/>
+				<xsd:element type="xsd:string" name="marca"/>
+				<xsd:element type="xsd:string" name="modelo"/>
+				<xsd:element ref="listaCategorias" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="listaCaracteristicas" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="idProducto" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+  	<xsd:element name="listaCategorias">
+		<xsd:annotation>
+			<xsd:documentation>Elemento para el listado de categorias</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para la lista de categorias</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element type="categoriaValores" name="categoria" minOccurs="1" maxOccurs="10"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:simpleType name="categoriaValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para categoria</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Guitarra eléctrica"/>
+			<xsd:enumeration value="Guitarra acústica"/>
+			<xsd:enumeration value="Piano"/>
+			<xsd:enumeration value="Bajo eléctrico"/>
+			<xsd:enumeration value="Violín"/>
+			<xsd:enumeration value="Ukelele"/>
+			<xsd:enumeration value="Guitarra clásica"/>
+			<xsd:enumeration value="Batería"/>
+			<xsd:enumeration value="Tambor"/>
+			<xsd:enumeration value="Flauta"/>
+			<xsd:enumeration value="Saxofón"/>
+			<xsd:enumeration value="Trompeta"/>
+			<xsd:enumeration value="Mandolina"/>
+			<xsd:enumeration value="Contrabajo"/>
+			<xsd:enumeration value="Violonchelo"/>
+			<xsd:enumeration value="Banyo"/>
+			<xsd:enumeration value="Acordeón"/>
+			<xsd:enumeration value="Arpa"/>
+			<xsd:enumeration value="Instrumento de teclado"/>
+			<xsd:enumeration value="Instrumento de percusión"/>
+			<xsd:enumeration value="Clarinete"/>
+			<xsd:enumeration value="Armónica"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+  	<xsd:element name="listaCaracteristicas">
+		<xsd:annotation>
+			<xsd:documentation>Elemento para el listado de caracteristicas</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para la lista de caracteristicas</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element ref="caracteristica" minOccurs="1" maxOccurs="10"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="caracteristica">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Caracteristica</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element type="xsd:string" name="nombre"/>
+				<xsd:element type="xsd:string" name="valor"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>
