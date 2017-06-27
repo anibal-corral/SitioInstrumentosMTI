@@ -1,0 +1,52 @@
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="inventario">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Inventario</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="establecimiento"/>
+				<xsd:element ref="listaProductos" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+  	<xsd:element name="establecimiento">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Establecimiento Simple</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para establecimiento</xsd:documentation>
+			</xsd:annotation>
+			<xsd:attribute name="idEstablecimiento" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+  	<xsd:element name="listaProductos">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Establecimiento Simple</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para establecimiento</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element ref="producto" minOccurs="1" maxOccurs="1024"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+  	<xsd:element name="producto">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Producto Simple</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para producto</xsd:documentation>
+			</xsd:annotation>
+			<xsd:attribute name="idProducto" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+  
+</xsd:schema>

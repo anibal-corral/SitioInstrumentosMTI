@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE inventario SYSTEM "inventario.dtd">
+<inventario>
+	<establecimiento idEstablecimiento="3" />
+	<listaProductos>
+		<producto idProducto="10"/>
+		<producto idProducto="21"/>
+		<producto idProducto="8"/>
+	</listaProductos>
+</inventario>
