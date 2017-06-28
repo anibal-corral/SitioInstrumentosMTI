@@ -1,0 +1,125 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">	
+	<xsd:element name="venta">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Venta</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="establecimiento"/>
+				<xsd:element ref="cliente"/>
+				<xsd:element ref="items"/>
+				<xsd:element type="xsd:integer" name="montoTotal"/>
+				<xsd:element type="monedaValores" name="monedaVenta"/>
+				<xsd:element type="xsd:date" name="fechaVenta"/>
+				<xsd:element type="medioPagoValores" name="medioPago"/>				
+			</xsd:sequence>
+			<xsd:attribute name="idVenta" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:simpleType name="monedaValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para moneda</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="USD"/>
+			<xsd:enumeration value="CLP"/>
+			<xsd:enumeration value="EURO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="medioPagoValores">
+		<xsd:annotation>
+			<xsd:documentation>Definición de los valores permitidos para medio pago</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="EFECTIVO"/>
+			<xsd:enumeration value="CREDITO"/>
+			<xsd:enumeration value="DEBITO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+  	<xsd:element name="establecimiento">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Establecimiento Simple</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para establecimiento</xsd:documentation>
+			</xsd:annotation>
+			<xsd:attribute name="idEstablecimiento" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+  	<xsd:element name="cliente">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Cliente</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para cliente</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element type="runType" name="rut"/>
+				<xsd:element name="nombres" type="xsd:string"/>
+				<xsd:element name="apellidoPaterno" type="xsd:string"/>
+				<xsd:element name="apellidoMaterno" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="idCliente" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="runType">
+		<xsd:annotation>
+			<xsd:documentation>Definición de tipo complejo para rut</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="numero">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:positiveInteger">
+						<xsd:maxInclusive value="99999999"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="dv">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:pattern value="(\d|k|K)"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+  	<xsd:element name="items">
+		<xsd:annotation>
+			<xsd:documentation>Elemento para el listado de productos</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para la lista de productos</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element ref="producto" minOccurs="1" maxOccurs="1024"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+  	<xsd:element name="producto">
+		<xsd:annotation>
+			<xsd:documentation>Elemento Producto Simple</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Definición para producto</xsd:documentation>
+			</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element type="xsd:int" name="cantidad"/>
+				<xsd:element type="xsd:string" name="nombre"/>
+				<xsd:element type="xsd:int" name="precio"/>
+				<xsd:element type="monedaValores" name="moneda"/>
+			</xsd:sequence>
+			<xsd:attribute name="idProducto" type="xsd:integer" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

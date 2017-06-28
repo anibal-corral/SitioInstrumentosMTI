@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE venta SYSTEM "venta.dtd">
+<venta idVenta="10">
+	<establecimiento idEstablecimiento="3"/>
+	<cliente idCliente="7">
+		<rut>
+			<numero>18765000</numero>
+			<dv>0</dv>
+		</rut>
+		<nombres>JOSE LUIS</nombres>
+		<apellidoPaterno>GUERRERO</apellidoPaterno>
+		<apellidoMaterno>DIAZ</apellidoMaterno>
+	</cliente>
+	<items>
+		<producto idProducto="10">
+			<cantidad>1</cantidad>
+			<nombre>Guitarra eléctrica GRX22 color candy apple (CA)  Ibanez</nombre>
+			<precio>5000</precio>
+			<moneda>USD</moneda>
+		</producto>
+	</items>
+	<montoTotal>5000</montoTotal>
+	<monedaVenta>USD</monedaVenta>
+	<fechaVenta>2017-03-27</fechaVenta>
+	<medioPago>EFECTIVO</medioPago>
+</venta>
