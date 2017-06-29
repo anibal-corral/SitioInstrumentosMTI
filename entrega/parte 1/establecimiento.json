@@ -1,0 +1,26 @@
+{
+   "@idEstablecimiento": "3",
+   "nombre": "Tienda USM",
+   "rut": {
+      "numero": "98765000",
+      "dv": "0"
+   },
+   "ubicacion": {
+      "pais": "CHILE",
+      "region": "Metropolitana",
+      "ciudad": "SANTIAGO",
+      "comuna": "Vitacura",
+      "calle": "Avenida Santa Maria",
+      "numero": "6400",
+      "coordenada": {
+         "latitud": "-33.3775228",
+         "longitud": "-70.5774312"
+      }
+   },
+   "telefono": {
+      "CodigoPais": "56",
+      "Prefijo": "32",
+      "Numero": "2654678"
+   },
+   "horario": "Sin información"
+}
