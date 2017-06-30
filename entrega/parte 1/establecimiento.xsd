@@ -103,28 +103,28 @@
 			<xsd:documentation>Definición de tipo complejo para Telefono</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="CodigoPais" minOccurs="0">
+			<xsd:element name="codigoPais" minOccurs="0">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:pattern value="([0-9])+"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="Prefijo" minOccurs="0">
+			<xsd:element name="prefijo" minOccurs="0">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:pattern value="([0-9])+"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="Numero">
+			<xsd:element name="numero">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:pattern value="([0-9])+"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="Anexo" minOccurs="0">
+			<xsd:element name="anexo" minOccurs="0">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
 						<xsd:pattern value="([0-9])+"/>

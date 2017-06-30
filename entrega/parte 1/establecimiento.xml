@@ -19,9 +19,9 @@
 	</coordenada>
   </ubicacion>
   <telefono>
-	<CodigoPais>56</CodigoPais>
-	<Prefijo>32</Prefijo>
-	<Numero>2654678</Numero>
+	<codigoPais>56</codigoPais>
+	<prefijo>32</prefijo>
+	<numero>2654678</numero>
   </telefono>
   <horario>Sin información</horario>
 </establecimiento>

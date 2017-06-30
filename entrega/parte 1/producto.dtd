@@ -1,0 +1,47 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT producto (codigo,nombre,descripcion,marca,modelo,
+                    listaCategorias,listaCaracteristicas)>
+<!ATTLIST producto
+  xmlns CDATA #FIXED ''
+  idProducto CDATA #REQUIRED>
+
+<!ELEMENT codigo (#PCDATA)>
+<!ATTLIST codigo
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT descripcion (#PCDATA)>
+<!ATTLIST descripcion
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT marca (#PCDATA)>
+<!ATTLIST marca
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT modelo (#PCDATA)>
+<!ATTLIST modelo
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT listaCategorias (categoria)>
+<!ATTLIST listaCategorias
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT listaCaracteristicas (caracteristica)+>
+<!ATTLIST listaCaracteristicas
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT categoria (#PCDATA)>
+<!ATTLIST categoria
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT caracteristica (nombre,valor)>
+<!ATTLIST caracteristica
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT valor (#PCDATA)>
+<!ATTLIST valor
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST nombre
+  xmlns CDATA #FIXED ''>

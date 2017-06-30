@@ -1,0 +1,44 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT inventario (establecimiento,listaProductos)>
+<!ATTLIST inventario
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT establecimiento EMPTY>
+<!ATTLIST establecimiento
+  xmlns CDATA #FIXED ''
+  idEstablecimiento CDATA #REQUIRED>
+
+<!ELEMENT listaProductos (producto)+>
+<!ATTLIST listaProductos
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT producto (cantidad,precio,moneda,estado,fechaIngreso,
+                    fechaActualizacion)>
+<!ATTLIST producto
+  xmlns CDATA #FIXED ''
+  idProducto CDATA #REQUIRED>
+
+<!ELEMENT cantidad (#PCDATA)>
+<!ATTLIST cantidad
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT moneda (#PCDATA)>
+<!ATTLIST moneda
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT estado (#PCDATA)>
+<!ATTLIST estado
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fechaIngreso (#PCDATA)>
+<!ATTLIST fechaIngreso
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fechaActualizacion (#PCDATA)>
+<!ATTLIST fechaActualizacion
+  xmlns CDATA #FIXED ''>

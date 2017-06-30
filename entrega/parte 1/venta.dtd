@@ -1,0 +1,82 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT venta (establecimiento,cliente,items,montoTotal,monedaVenta,
+                 fechaVenta,medioPago)>
+<!ATTLIST venta
+  xmlns CDATA #FIXED ''
+  idVenta CDATA #REQUIRED>
+
+<!ELEMENT establecimiento EMPTY>
+<!ATTLIST establecimiento
+  xmlns CDATA #FIXED ''
+  idEstablecimiento CDATA #REQUIRED>
+
+<!ELEMENT cliente (rut,nombres,apellidoPaterno,apellidoMaterno)>
+<!ATTLIST cliente
+  xmlns CDATA #FIXED ''
+  idCliente CDATA #REQUIRED>
+
+<!ELEMENT items (producto)>
+<!ATTLIST items
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT montoTotal (#PCDATA)>
+<!ATTLIST montoTotal
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT monedaVenta (#PCDATA)>
+<!ATTLIST monedaVenta
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fechaVenta (#PCDATA)>
+<!ATTLIST fechaVenta
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT medioPago (#PCDATA)>
+<!ATTLIST medioPago
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT rut (numero,dv)>
+<!ATTLIST rut
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT nombres (#PCDATA)>
+<!ATTLIST nombres
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT apellidoPaterno (#PCDATA)>
+<!ATTLIST apellidoPaterno
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT apellidoMaterno (#PCDATA)>
+<!ATTLIST apellidoMaterno
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT producto (cantidad,nombre,precio,moneda)>
+<!ATTLIST producto
+  xmlns CDATA #FIXED ''
+  idProducto CDATA #REQUIRED>
+
+<!ELEMENT numero (#PCDATA)>
+<!ATTLIST numero
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dv (#PCDATA)>
+<!ATTLIST dv
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT cantidad (#PCDATA)>
+<!ATTLIST cantidad
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST nombre
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT moneda (#PCDATA)>
+<!ATTLIST moneda
+  xmlns CDATA #FIXED ''>

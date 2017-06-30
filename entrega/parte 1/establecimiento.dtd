@@ -1,0 +1,74 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT establecimiento (nombre,rut,ubicacion,telefono,horario)>
+<!ATTLIST establecimiento
+  xmlns CDATA #FIXED ''
+  idEstablecimiento CDATA #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST nombre
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT rut (numero,dv)>
+<!ATTLIST rut
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT ubicacion (pais,region,ciudad,comuna,calle,numero,coordenada)>
+<!ATTLIST ubicacion
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT telefono (codigoPais,prefijo,numero)>
+<!ATTLIST telefono
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT horario (#PCDATA)>
+<!ATTLIST horario
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dv (#PCDATA)>
+<!ATTLIST dv
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT pais (#PCDATA)>
+<!ATTLIST pais
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT region (#PCDATA)>
+<!ATTLIST region
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT ciudad (#PCDATA)>
+<!ATTLIST ciudad
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT comuna (#PCDATA)>
+<!ATTLIST comuna
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT calle (#PCDATA)>
+<!ATTLIST calle
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT coordenada (latitud,longitud)>
+<!ATTLIST coordenada
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT codigoPais (#PCDATA)>
+<!ATTLIST codigoPais
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT prefijo (#PCDATA)>
+<!ATTLIST prefijo
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT latitud (#PCDATA)>
+<!ATTLIST latitud
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT numero (#PCDATA)>
+<!ATTLIST numero
+  xmlns CDATA #FIXED ''>
