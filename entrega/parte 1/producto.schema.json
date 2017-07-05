@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "www.mti.cl/inventario.json",
+  "properties": {
+    "idProducto": {
+      "type": "integer"
+    },
+    "codigo": {
+      "type": "integer"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "marca": {
+      "type": "string"
+    },
+    "modelo": {
+      "type": "string"
+    },
+    "listaCategorias": {
+      "type": "object",
+      "properties": {
+        "categoria": {
+          "type": "string",
+          "enum": [
+            "Guitarra eléctrica",
+            "Guitarra acústica",
+            "Piano",
+            "Bajo eléctrico",
+            "Violín",
+            "Ukelele",
+            "Guitarra clásica",
+            "Batería",
+            "Tambor",
+            "Flauta",
+            "Saxofón",
+            "Trompeta",
+            "Mandolina",
+            "Contrabajo",
+            "Violonchelo",
+            "Banyo",
+            "Acordeón",
+            "Arpa",
+            "Instrumento de teclado",
+            "Instrumento de percusión",
+            "Clarinete",
+            "Armónica"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "listaCaracteristicas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "valor": {
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 10,
+      "uniqueItems": true
+    }
+  }
+}
