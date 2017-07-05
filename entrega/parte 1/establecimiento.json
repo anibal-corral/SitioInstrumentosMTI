@@ -1,8 +1,8 @@
 {
-   "@idEstablecimiento": "3",
+   "idEstablecimiento": 3,
    "nombre": "Tienda USM",
    "rut": {
-      "numero": "98765000",
+      "numero": 98765000,
       "dv": "0"
    },
    "ubicacion": {
@@ -18,9 +18,9 @@
       }
    },
    "telefono": {
-      "CodigoPais": "56",
-      "Prefijo": "32",
-      "Numero": "2654678"
+      "codigoPais": "56",
+      "prefijo": "32",
+      "numero": "2654678"
    },
    "horario": "Sin información"
 }

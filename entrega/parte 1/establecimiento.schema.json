@@ -1,0 +1,98 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "www.mti.cl/establecimiento.json",
+  "properties": {
+    "idEstablecimiento": {
+      "type": "integer"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "rut": {
+      "properties": {
+        "numero": {
+          "type": "number"
+        },
+        "dv": {
+          "type": "string",
+          "pattern": "^([0-9]|k|K)$"
+        }
+      }
+    },
+    "ubicacion": {
+      "properties": {
+        "pais": {
+          "type": "string",
+          "enum": [
+            "ARGENTINA",
+            "CHILE",
+            "COLOMBIA",
+            "ESPAÑA",
+            "PERU"
+          ]
+        },
+        "region": {
+          "type": "string",
+          "optional": true
+        },
+        "ciudad": {
+          "type": "string",
+          "enum": [
+            "BUENOS AIRES",
+            "SANTIAGO",
+            "BOGOTÁ",
+            "MADRID",
+            "LIMA"
+          ]
+        },
+        "comuna": {
+          "type": "string",
+          "optional": true
+        },
+        "calle": {
+          "type": "string"
+        },
+        "numero": {
+          "type": "short"
+        },
+        "coordenada": {
+          "properties": {
+            "latitud": {
+              "type": "decimal"
+            },
+            "longitud": {
+              "type": "decimal"
+            }
+          },
+          "optional": true
+        }
+      }
+    },
+    "telefono": {
+      "properties": {
+        "codigoPais": {
+          "type": "string",
+          "pattern": "^([0-9])+$",
+          "optional": true
+        },
+        "prefijo": {
+          "type": "string",
+          "pattern": "^([0-9])+$",
+          "optional": true
+        },
+        "numero": {
+          "type": "string",
+          "pattern": "^([0-9])+$"
+        },
+        "anexo": {
+          "type": "string",
+          "optional": true
+        }
+      }
+    },
+    "horario": {
+      "type": "string"
+    }
+  }
+}
