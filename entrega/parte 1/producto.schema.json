@@ -1,7 +1,7 @@
 {
   "type": "object",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "www.mti.cl/inventario.json",
+  "id": "www.mti.cl/producto.json",
   "properties": {
     "idProducto": {
       "type": "integer"

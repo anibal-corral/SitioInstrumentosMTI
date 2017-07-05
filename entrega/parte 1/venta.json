@@ -1,12 +1,12 @@
 {
-   "@idVenta": "10",
+   "idVenta": 10,
    "establecimiento": {
-      "@idEstablecimiento": "3"
+      "idEstablecimiento": 3
    },
    "cliente": {
-      "@idCliente": "7",
+      "idCliente": 7,
       "rut": {
-         "numero": "18765000",
+         "numero": 18765000,
          "dv": "0"
       },
       "nombres": "JOSE LUIS",
@@ -15,14 +15,14 @@
    },
    "items": {
       "producto": {
-         "@idProducto": "10",
-         "cantidad": "1",
+         "idProducto": 10,
+         "cantidad": 1,
          "nombre": "Guitarra eléctrica GRX22 color candy apple (CA)  Ibanez",
-         "precio": "5000",
+         "precio": 5000,
          "moneda": "USD"
       }
    },
-   "montoTotal": "5000",
+   "montoTotal": 5000,
    "monedaVenta": "USD",
    "fechaVenta": "2017-03-27",
    "medioPago": "EFECTIVO"

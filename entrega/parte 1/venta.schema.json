@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "www.mti.cl/venta.json",
+  "properties": {
+    "idVenta": {
+      "type": "integer"
+    },
+    "establecimiento": {
+      "type": "object",
+      "properties": {
+        "idEstablecimiento": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "cliente": {
+      "type": "object",
+      "properties": {
+        "idCliente": {
+          "type": "integer"
+        },
+        "rut": {
+          "type": "object",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "dv": {
+              "type": "string",
+              "pattern": "^([0-9]|k|K)$"
+            }
+          },
+          "additionalProperties": false
+        },
+        "nombres": {
+          "type": "string"
+        },
+        "apellidoPaterno": {
+          "type": "string"
+        },
+        "apellidoMaterno": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "items": {
+      "type": "object",
+      "properties": {
+        "producto": {
+          "type": "object",
+          "properties": {
+            "idProducto": {
+              "type": "integer"
+            },
+            "cantidad": {
+              "type": "integer"
+            },
+            "nombre": {
+              "type": "string"
+            },
+            "precio": {
+              "type": "integer"
+            },
+            "moneda": {
+              "type": "string",
+              "enum": [
+                "USD",
+                "CLP",
+                "EURO"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "montoTotal": {
+      "type": "integer"
+    },
+    "monedaVenta": {
+      "type": "string",
+      "enum": [
+        "USD",
+        "CLP",
+        "EURO"
+      ]
+    },
+    "fechaVenta": {
+      "type": "date"
+    },
+    "medioPago": {
+      "type": "string",
+      "enum": [
+        "EFECTIVO",
+        "CREDITO",
+        "DEBITO"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
