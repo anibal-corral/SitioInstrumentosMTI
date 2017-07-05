@@ -1,30 +1,30 @@
 {
    "establecimiento": {
-      "@idEstablecimiento": "3"
+      "idEstablecimiento": 3
    },
    "listaProductos": [
       {
-         "@idProducto": "10",
-         "cantidad": "4",
-         "precio": "5000",
+         "idProducto": 10,
+         "cantidad": 4,
+         "precio": 5000,
          "moneda": "USD",
          "estado": "DISPONIBLE",
          "fechaIngreso": "2017-03-27",
          "fechaActualizacion": "2017-03-29"
       },
       {
-         "@idProducto": "21",
-         "cantidad": "5",
-         "precio": "2500",
+         "idProducto": 21,
+         "cantidad": 5,
+         "precio": 2500,
          "moneda": "USD",
          "estado": "DISPONIBLE",
          "fechaIngreso": "2017-03-27",
          "fechaActualizacion": "2017-03-28"
       },
       {
-         "@idProducto": "8",
-         "cantidad": "6",
-         "precio": "3000",
+         "idProducto": 8,
+         "cantidad": 6,
+         "precio": 3000,
          "moneda": "USD",
          "estado": "DISPONIBLE",
          "fechaIngreso": "2017-03-27",

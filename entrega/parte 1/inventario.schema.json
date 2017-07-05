@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "www.mti.cl/inventario.json",
+  "properties": {
+    "establecimiento": {
+      "properties": {
+        "idEstablecimiento": {
+          "type": "integer"
+        }
+      }
+    },
+    "listaProductos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "idProducto": {
+            "type": "integer"
+          },
+          "cantidad": {
+            "type": "integer"
+          },
+          "precio": {
+            "type": "integer"
+          },
+          "moneda": {
+            "type": "string",
+            "enum": [
+              "USD",
+              "CLP",
+              "EURO"
+            ]
+          },
+          "estado": {
+            "type": "string",
+            "enum": [
+              "INGRESADO",
+              "PENDIENTE",
+              "RESERVADO",
+              "DISPONIBLE"
+            ]
+          },
+          "fechaIngreso": {
+            "type": "string",
+            "format": "date"
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}
