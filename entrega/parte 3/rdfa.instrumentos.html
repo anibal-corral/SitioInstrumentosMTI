@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div ng-view="" class="ng-scope"><div class="panel panel-default ng-scope">
+<a href="#/addinstrumento" class="btn btn-default btn-block">
+    Registrar nuevo instrumento
+</a>
+<div class="panel-heading">Listado de Instrumentos</div>
+<!-- <button ng-click="obtenerInstrumentos()"> hola instrumentos</button> -->
+	<table class="table">
+		<tbody><tr><th></th>
+			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Descripción</th>
+			<th>Marca</th>
+			<th>Modelo</th>
+			<th>Origen</th>
+			<th>Establecimiento</th>
+			<th>Acción</th>
+		</tr>
+		<!-- ngRepeat: i in instrumentos -->
+        
+		<tr ng-repeat="i in instrumentos" class="ng-scope" typeof="schema:Thing"> 
+				<td class="ng-binding" property="schema:identifier">0 </td>
+				<td class="ng-binding" property="schema:name">INSTRUMENTO 1</td>
+				<td class="ng-binding" property="schema:number">20</td>
+				<td class="ng-binding" property="schema:description">EL PRIMER INSTRUMENTO DE PRUEBA</td>
+				<td class="ng-binding" property="schema:Brand">MARCA TEST</td>
+				<td class="ng-binding" property="schema:ProductModel">MODEL TEST</td>
+				<td class="ng-binding" property="schema:Place">CHINO 1</td>
+				<td class="ng-binding" property="schema:Place">Establecimiento 1</td>
+				<td>
+				<button class="btn btn-danger btn-xs pull-right" ng-click="retirar($index,i)" type="button">Retirar</button>
+				<a href="#/instrumento/595035365e59020010f2485e" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+				<!--
+		 		<a href="#/instrumento/{{ i._id }}" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+				-->
+				</td>
+				
+		</tr><!-- end ngRepeat: i in instrumentos -->
+	</tbody></table>
+</div></div>
+</body>
+</html>
