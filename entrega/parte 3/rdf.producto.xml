@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+    xmlns:ex="http://www.example.org/store" 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:sch="http://schema.org/">
+    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/">
+    <sch:Product>
+            <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/producto">
+                <sch:number>737383</sch:number>
+				<sch:Name>Guitarra eléctrica GRX22 color candy apple (CA)  Ibanez</sch:Name>
+				<sch:description>Guitarra eléctrica Marca Ibanez modelo GRX22. Una guitarra no tiene que costar una fortuna para tener un buen sonido, es el caso de la serie GRX de Ibanez, fue desarrollada para los músicos que desean la calidad de esta marca, pero a un precio asequible.</sch:description>
+				<sch:brand>Ibanez</sch:brand>
+				<sch:model>GRX22</sch:model>
+                <sch:category>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/producto">
+                         <sch:place>Guitarra eléctrica</sch:place>
+                   	</rdf:Description>
+                </sch:category> 
+                   
+                <sch:ProductModel>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/caracteristicas">
+                    	<sch:name>ESCALA</sch:name>
+						<sch:ProductModel>25.5 pulgadas</sch:ProductModel>
+					</rdf:Description>
+                 </sch:ProductModel>
+
+                 <sch:ProductModel>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/caracteristicas">
+                    	<sch:name>NÚMERO DE CUERDAS</sch:name>
+						<sch:number>6</sch:number>
+
+					</rdf:Description>
+                 </sch:ProductModel>
+
+                 <sch:ProductModel>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/caracteristicas">
+                    	<sch:name>COLOR</sch:name>
+						<sch:ProductModel>Candy Apple (CA)</sch:ProductModel>
+                       </rdf:Description>
+                 </sch:ProductModel>
+
+                 <sch:ProductModel>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/caracteristicas">
+                    	<sch:name>MATERIAL NECK</sch:name>
+						<sch:ProductModel>Maple</sch:ProductModel>
+                       </rdf:Description>
+                 </sch:ProductModel>
+
+                 <sch:ProductModel>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/caracteristicas">
+                    	<sch:name>MATERIAL CUERPO</sch:name>
+						<sch:ProductModel>Basswood</sch:ProductModel>
+						</rdf:Description>
+                 </sch:ProductModel>
+	        </rdf:Description>
+       	   </sch:Product>
+       	</rdf:Description>
+ </rdf:RDF>  
