@@ -1,0 +1,63 @@
+</head>
+<body>
+
+<div ng-view="" class="ng-scope"><div class="panel panel-default ng-scope">
+<a href="#/addestablecimiento" class="btn btn-default btn-block">
+    Registrar nuevo establecimiento
+</a>
+<div class="panel-heading">Listado de Establecimientos</div>
+	<table class="table">
+		<tbody><tr>
+			
+			<th>Nombre</th>
+			<th>Rut</th>
+			<th>Ubicación</th>
+			<th>Teléfono</th>
+			<th>Horario</th>
+			<th>Acción</th>
+		</tr>
+
+		<!-- ngRepeat: e in establecimientos -->    
+
+		<tr ng-repeat="e in establecimientos" class="ng-scope" typeof="schema:Place">
+		<td class="ng-binding" property="schema:name">Establecimiento 1</td>
+		<td class="ng-binding" property="schema:number"> 1-9</td>
+		<td class="ng-binding" property="schema:PostalAddress">Manchester</td>
+		<td class="ng-binding" property="schema:number">+56985819635</td>
+		<td class="ng-binding" property="schema:openingHours">Lunes a Viernes</td>
+		
+		<td>
+		<a href="#/establecimiento/595034f25e59020010f2485d" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+		</td>
+		</tr><!-- end ngRepeat: e in establecimientos -->
+
+		<tr ng-repeat="e in establecimientos" class="ng-scope" typeof="schema:Place">
+		<td class="ng-binding" property="schema:name">Establecimiento 2</td>
+		<td class="ng-binding" property="schema:number">654541126-k</td>
+		<td class="ng-binding" property="schema:PostalAddress">Huerfanos 422</td>
+		<td class="ng-binding" property="schema:number">+56437843443</td>
+		<td class="ng-binding" property="schema:openingHours">9:00 - 18:30</td>
+		
+		<td>
+		<a href="#/establecimiento/595b11c28a9fc50010f032e6" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+		</td>
+		</tr><!-- end ngRepeat: e in establecimientos -->
+
+		<tr ng-repeat="e in establecimientos" class="ng-scope" typeof="schema:Place">
+		<td class="ng-binding" property="schema:name">Establecimiento 3</td>
+		<td class="ng-binding" property="schema:number">74545854-5</td>
+		<td class="ng-binding" property="schema:PostalAddress">alameda 623</td>
+		<td class="ng-binding" property="schema:number">+56 3332333</td>
+		<td class="ng-binding" property="schema:openingHours">9:00 - 18:30</td>
+		
+		<td>
+		<a href="#/establecimiento/595b11d88a9fc50010f032e7" class="btn btn-default btn-xs pull-right" style="margin-right:10px;">Editar</a>
+		</td>
+		</tr><!-- end ngRepeat: e in establecimientos -->
+
+	 </tbody></table>
+
+    </div></div>
+
+</body>
+</html>
