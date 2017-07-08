@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+    xmlns:ex="http://www.example.org/store" 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:sch="http://schema.org/">
+    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/">
+      
+  <sch:Place>
+            <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/establecimiento">
+                <sch:name>Tienda USM</sch:name>
+                <sch:Thing>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/rut">
+                       <sch:Number>98765000</sch:Number>
+                       <sch:Number>0</sch:Number>
+                    </rdf:Description>
+                </sch:Thing>
+            
+                <sch:PostalAddress>
+                    <rdf:Description rdf:about="https://github.com/anibal-corral/SitioInstrumentosMTI/direccion">
+                        <sch:addressCountry>CHILE</sch:addressCountry>
+                        <sch:addressRegion>Metropolitana</sch:addressRegion>
+                        <sch:addressLocality>SANTIAGO</sch:addressLocality>
+                        <sch:addressLocality>Vitacura</sch:addressLocality>
+                        <sch:streetAddres>Avenida Santa Maria</sch:streetAddres>
+                        <sch:PostalCode>6400</sch:PostalCode>
+                          <sch:GeoCoordinates>
+                              <rdf:Description rdf:about="http://schema.org/GeoCoordinates">
+                                  <sch:longitude>-70.5774312</sch:longitude>
+                                <sch:latitude>-33.3775228</sch:latitude>
+                              </rdf:Description>
+                          </sch:GeoCoordinates>
+                    </rdf:Description>   
+                </sch:PostalAddress>
+
+                <sch:ContactPoint>  
+                    <rdf:Description rdf:about="http://schema.org/telefono">
+                           <sch:areaServed>56</sch:areaServed>
+                           <sch:areaServed>32</sch:areaServed>
+                           <sch:telephone>2654678</sch:telephone>
+                    </rdf:Description>
+                </sch:ContactPoint>
+               <sch:openingHours>Sin información</sch:openingHours>
+             </rdf:Description>
+        </sch:Place>
+   </rdf:Description>
+</rdf:RDF>
